@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌤️ Weather Dashboard</h1>
+    </header>
+
+    <div class="search-bar">
+      <input type="text" id="cityInput" placeholder="Enter city..." />
+      <button onclick="searchWeather()">Search</button>
+    </div>
+
+    <div class="error" id="errorMsg"></div>
+
+    <div class="weather-section">
+      <div class="card" id="currentWeather">
+        <h2>Current Weather</h2>
+        <p id="temperature"></p>
+        <p id="humidity"></p>
+        <p id="wind"></p>
+        <p id="condition"></p>
+      </div>
+
+      <div class="card" id="forecast">
+        <h2>5-Day Forecast</h2>
+        <div class="forecast-grid" id="forecastDays"></div>
+      </div>
+    </div>
+
+    <canvas id="chartCanvas" height="100"></canvas>
+
+    <div class="history card">
+      <h2>Search History</h2>
+      <ul id="searchHistory"></ul>
+    </div>
+  </div>
+
+  <!-- Updated Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h2>🏢 About Us</h2>
+        <p>
+          We believe in Trust and building Long Term Relationship with our customers.
+          We follow Plan-Do-Act-Review approach in our deliveries. We appreciate our
+          customers for providing detailed understanding of their business processes
+          and expectations which help us to derive optimum workable solutions at minimal
+          cost and easy implementation.
+        </p>
+      </div>
+
+      <div>
+        <h2>📞 Contact</h2>
+        <p><strong>Website:</strong> GennextIT</p>
+      </div>
+
+      <div>
+        <h2>💬 Feedback & Support</h2>
+        <p><strong>Ashutosh Session ID:</strong><br> 05ede9aecacc1dd73f663095b753f27fd7bf21c4ebfc12368ca15918e83f22a95e</p>
+        <p><strong>Atul Session ID:</strong><br> 05fe8ccdb87388cc8d7a1a13e919f377b6b489817fbbb9e907c79c762dd3021560</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+      &copy; 2025 Weather Dashboard | Designed with passion 💙
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
